@@ -5,6 +5,7 @@ module.exports = (config) => {
   });
 
   config.addPassthroughCopy("src/assets/imgs/*.jpg");
+  config.addPassthroughCopy("src/favicon.ico");
 
   return {
     dir: {
