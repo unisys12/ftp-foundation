@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTP Foundation</title>
+    <link rel="stylesheet" href="{{ 'assets/css/styles.css' | url }}">
+</head>
+
+<body class="container mx-auto my-2">
+    <header class="grid sm:grid-cols-3 justify-center">
+        <div class="col-span-2">
+            <h1 class="text-3xl font-semibold">
+                For The Puppies Foundation
+            </h1>
+        </div>
+        <nav class="flex mt-2 sm:space-x-8 flex-col sm:flex-row">
+            <a href="/"
+                class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Home</a>
+            <a href="/"
+                class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Mission</a>
+            <a href="/"
+                class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Become
+                a Guardian</a>
+            <a href="/"
+                class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Donate</a>
+        </nav>
+    </header>
+    <main class="grid sm:grid-cols-3 text-center mt-8 gap-4">
+        <div class="col-span-2 flex flex-row flex-wrap gap-4">
+            <!-- Info Cards -->
+            {% include "mission_card.html" %}
+            {% include "education_card.html" %}
+            {% include "guardian_card.html" %}
+            {% include "donation_card.html" %}
+        </div>
+        <div class="">
+            <img src="{{ 'assets/imgs/logo_idea_color.jpg' | url }}" alt="Foundation Logo">
+        </div>
+    </main>
+    <footer
+        class="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center md:justify-between">
+        <p class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+            © 2023 For The Puppies Foundation
+        </p>
+        <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
+            <li>
+                <a href="#"
+                    class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
+                    About Us
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
+                    Meeting Minutes
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
+                    Mission & Vision
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
+                    Contact Us
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
