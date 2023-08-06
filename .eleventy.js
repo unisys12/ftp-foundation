@@ -8,6 +8,7 @@ module.exports = (config) => {
   config.addPassthroughCopy("src/favicon.ico");
 
   return {
+    htmlTemplateEngine: "njk",
     dir: {
       input: "src",
       ouput: "_site",
