@@ -11,12 +11,12 @@
 
 <body class="container mx-auto my-2">
     <header class="grid sm:grid-cols-3 justify-center">
-        <div class="col-span-2">
+        <div class="sm:col-span-2">
             <h1 class="text-3xl font-semibold">
                 For The Puppies Foundation
             </h1>
         </div>
-        <nav class="flex mt-2 sm:space-x-8 flex-col sm:flex-row">
+        <nav class="sm:flex mt-2 sm:space-x-8 flex-col sm:flex-row text-center">
             <a href="/"
                 class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Home</a>
             <a href="/"
@@ -28,16 +28,16 @@
                 class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Donate</a>
         </nav>
     </header>
-    <main class="grid sm:grid-cols-3 text-center mt-8 gap-4">
-        <div class="col-span-2 flex flex-row flex-wrap gap-4">
+    <main class="grid grid-flow-row sm:grid-cols-3 text-center mt-8 gap-4">
+        <div class="sm:col-span-2 flex flex-row flex-wrap justify-center gap-4">
             <!-- Info Cards -->
             {% include "mission_card.html" %}
             {% include "education_card.html" %}
             {% include "guardian_card.html" %}
             {% include "donation_card.html" %}
         </div>
-        <div class="">
-            <img src="{{ 'assets/imgs/ftpf_logo.jpg' | url }}" alt="Foundation Logo">
+        <div class="mx-auto">
+            <img src="{{ 'assets/imgs/ftpf_logo.jpg' | url }}" class="" alt="Foundation Logo">
         </div>
     </main>
     <footer
