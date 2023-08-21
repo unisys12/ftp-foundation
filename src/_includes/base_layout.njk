@@ -15,8 +15,9 @@
             <h1 class="text-3xl font-semibold">
                 For The Puppies Foundation
             </h1>
+        <img src="{{ '/assets/imgs/ftpf_logo.jpg' | url }}" class="screen:hidden max-h-24 mx-auto" />
         </div>
-        <nav class="sm:flex mt-2 sm:space-x-8 flex-col sm:flex-row text-center">
+        <nav class="sm:flex mt-2 sm:space-x-8 flex-col sm:flex-row text-center print:hidden">
             <a href="/"
                 class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Home</a>
             <a href="/mission"
@@ -34,7 +35,7 @@
                 {{ content | safe }}
             </article>
         </div>
-        <div class="mx-auto">
+        <div class="mx-auto print:hidden">
             <img src="{{ '/assets/imgs/ftpf_logo.jpg' | url }}" class="" alt="Foundation Logo">
         </div>
     </main>
@@ -43,7 +44,7 @@
         <p class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
             © 2023 For The Puppies Foundation
         </p>
-        <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
+        <ul class="flex flex-wrap items-center gap-y-2 gap-x-8 print:hidden">
             <li>
                 <a href="#"
                     class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
