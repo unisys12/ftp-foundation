@@ -29,11 +29,7 @@
         </nav>
     </header>
     <main class="grid grid-flow-row sm:grid-cols-3 text-center mt-8 gap-4">
-        <div class="sm:col-span-2 flex flex-row flex-wrap justify-center gap-4">
-            <article class="prose mx-4 lg:prose-xl text-left">
-                {{ content | safe }}
-            </article>
-        </div>
+        {{ content | safe }}
         <div class="mx-auto">
             <img src="{{ '/assets/imgs/ftpf_logo.jpg' | url }}" class="" alt="Foundation Logo">
         </div>
