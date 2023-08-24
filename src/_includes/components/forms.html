@@ -1,0 +1,40 @@
+{% macro label(name) %}
+<label for="{{ name | slug}}" class="block text-gray-700 font-semibold">{{ name | title }}:</label>
+{% endmacro %}
+
+{% macro gn_input(type, name) %}
+<input type="{{ type }}" name="{{ name | slug }}" id="{{ name | slug }}" class="block w-full rounded-md"
+    autocomplete="given-name">
+{% endmacro %}
+
+{% macro fn_input(type, name) %}
+<input type="{{ type }}" name="{{ name }}" id="{{ name | slug }}" class="block w-full rounded-md"
+    autocomplete="family-name">
+{% endmacro %}
+
+{% macro input(type, name) %}
+<label for="{{ name }}" class="block text-left mt-4">
+    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md">
+</label>
+{% endmacro %}
+
+{% macro submit() %}
+<button type="submit"
+    class="bg-[#0023FB] hover:bg-blue-800 px-6 py-3 my-4 rounded-md text-zinc-50 hover:text-gray-50 hover:shadow-sm transition-all duration-300 mb-4">Submit</button>
+{% endmacro %}
+
+{% macro boolean(question, name) %}
+<div class="block">
+    <div class="mt-2">
+        <label class="inline-flex items-center" for="{{ name | slug}}">
+            <div class="flex items-center space-x-2">
+                <span>Yes</span><input type="checkbox" name="{{ name }}" id="{{ name | slug }}" value="yes">
+            </div>
+            <div class="ml-2 p-2">
+                <p>{{ question }}</p>
+            </div>
+        </label>
+    </div>
+</div>
+{% endmacro %}

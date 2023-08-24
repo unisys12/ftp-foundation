@@ -1,76 +1,45 @@
+{% import "components/forms.html" as form %}
+
 <div class="max-w-xl">
     <h3>Guardian Home Application</h3>
     <div class="grid grid-cols-1 gap-6">
-        <form action="">
-            <label for='name' class="block text-gray-700 font-semibold">Name:</label>
-            <input type='text' name='name' id='name' class="block w-full">
+        <form name="gaurdian_form" netlify>
+            {{ form.label('first name') }}
+            {{ form.gn_input('text' ,'first name') }}
 
-            <label for='address' class="block text-gray-700 font-semibold">Address</label>
-            <input type='text' name='address' id='address' class="block w-full">
+            {{ form.label('last name') }}
+            {{ form.fn_input('text' ,'last name') }}
 
-            <label for='city' class="block text-gray-700 font-semibold">City</label>
-            <input type='text' name='city' id='city' class="block w-full">
+            {{ form.input('text' ,'address') }}
 
-            <label for='state' class="block text-gray-700 font-semibold">State</label>
-            <input type='text' name='state' id='state' class="block w-full">
+            {{ form.input('text' ,'city') }}
 
-            <label for='zip' class="block text-gray-700 font-semibold">Zip</label>
-            <input type='text' name='zip' id='zip' class="block w-full">
+            {{ form.input('text' ,'state') }}
 
-            <div class="block">
-                <div class="mt-2">
-                    <div>
-                        <label class="inline-flex items-center">
-                            <div class="flex items-center space-x-2">
-                                <span>Yes</span><input type="checkbox" value="yes">
-                                <span>No</span><input type="checkbox" value="no">
-                            </div>
-                            <div class="ml-2 p-2">
-                                <p>Do you currently own two or more
-                                    dogs or cats that live in your home?</p>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
+            {{ form.input('text' ,'zip') }}
+            <hr>
+            <p class="font-xs leading-6">The following are not designed to <i>disqualify</i> perspective applicants.
+                Your answers will allow us to place a dog or cat that fits your home and family lifestyle. Check
+                only the boxes below that apply to you and your family.</p>
 
-            <div class="block">
-                <div class="mt-2">
-                    <div>
-                        <label class="inline-flex items-center space-x-2">
-                            <div class="flex items-center space-x-2">
-                                <span>Yes</span><input type="checkbox" value="yes">
-                                <span>No</span><input type="checkbox" value="no">
-                            </div>
-                            <div class="ml-2 p-2">
-                                <p>Do you currently have any portion of your
-                                    yard fenced off?</p>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
+            {{ form.boolean('Do you currently own two or more
+            dogs or cats that live in your home?', 'multi dog') }}
 
-            <div class="block">
-                <div class="mt-2">
-                    <div>
-                        <label class="inline-flex items-center space-x-2">
-                            <div class="flex items-center space-x-2">
-                                <span>Yes</span><input type="checkbox" value="yes">
-                                <span>No</span><input type="checkbox" value="no">
-                            </div>
-                            <div class="ml-2 p-2">
-                                <p>Bringing a new dog or cat into your home can
-                                    be a big
-                                    commitment and change
-                                    to your normal routine. Are you and your family willing to accept these new
-                                    responsibilities and accepting of the changes to your normal routines during this
-                                    time?</p>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
+            {{ form.boolean('Do you currently have any portion of your
+            yard fenced off?', 'fenced-yard') }}
+
+            {{ form.boolean('Bringing a new dog or cat into your home can
+            be a big commitment and change to your normal routine. Are you and your family willing to accept these new
+            responsibilities and accepting of the changes to your normal routines during this time?',
+            'accepting-change') }}
+
+            {{ form.boolean('Are you willing to housebreak a puppy or dog?', 'housebreak') }}
+
+            {{ form.boolean('Do you currently have children living in your home?', 'Children living in home') }}
+
+            {{ form.boolean('Are there children that frequently visit your home?', 'children visit') }}
+
+            {{ form.submit() }}
 
         </form>
     </div>
