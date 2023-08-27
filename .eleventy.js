@@ -9,6 +9,7 @@ module.exports = (config) => {
 
   return {
     htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
     dir: {
       input: "src",
       ouput: "_site",
