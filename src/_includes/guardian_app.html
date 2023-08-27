@@ -4,19 +4,17 @@
     <h3>Guardian Home Application</h3>
     <div class="grid grid-cols-1 gap-6">
         <form name="gaurdian_form" netlify>
-            {{ form.label('first name') }}
-            {{ form.gn_input('text' ,'first name') }}
+            {{ form.name_input('text' ,'name') }}
 
-            {{ form.label('last name') }}
-            {{ form.fn_input('text' ,'last name') }}
+            {{ form.street_input('text' ,'street address') }}
 
-            {{ form.input('text' ,'address') }}
+            {{ form.city_input('text' ,'city') }}
 
-            {{ form.input('text' ,'city') }}
+            {{ form.state_input('text' ,'state') }}
 
-            {{ form.input('text' ,'state') }}
+            {{ form.zip_input('text' ,'zip') }}
 
-            {{ form.input('text' ,'zip') }}
+            {{ form.input('email' ,'email') }}
             <hr>
             <p class="font-xs leading-6">The following are not designed to <i>disqualify</i> perspective applicants.
                 Your answers will allow us to place a dog or cat that fits your home and family lifestyle. Check

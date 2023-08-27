@@ -1,21 +1,48 @@
-{% macro label(name) %}
-<label for="{{ name | slug}}" class="block text-gray-700 font-semibold">{{ name | title }}:</label>
-{% endmacro %}
-
-{% macro gn_input(type, name) %}
-<input type="{{ type }}" name="{{ name | slug }}" id="{{ name | slug }}" class="block w-full rounded-md"
-    autocomplete="given-name">
-{% endmacro %}
-
-{% macro fn_input(type, name) %}
-<input type="{{ type }}" name="{{ name }}" id="{{ name | slug }}" class="block w-full rounded-md"
-    autocomplete="family-name">
-{% endmacro %}
-
+{# General / Dynamic use only. AC may break #}
 {% macro input(type, name) %}
 <label for="{{ name }}" class="block text-left mt-4">
     <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
-    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md">
+    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
+        autocomplete="{{ type | slug }}">
+</label>
+{% endmacro %}
+
+{% macro name_input(type, name) %}
+<label for="{{ name }}" class="block text-left mt-4">
+    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md" autocomplete="name">
+</label>
+{% endmacro %}
+
+{% macro street_input(type, name) %}
+<label for="{{ name }}" class="block text-left mt-4">
+    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
+        autocomplete="street-address">
+</label>
+{% endmacro %}
+
+{% macro city_input(type, name) %}
+<label for="{{ name }}" class="block text-left mt-4">
+    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
+        autocomplete="address-level2">
+</label>
+{% endmacro %}
+
+{% macro state_input(type, name) %}
+<label for="{{ name }}" class="block text-left mt-4">
+    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
+        autocomplete="address-level1">
+</label>
+{% endmacro %}
+
+{% macro zip_input(type, name) %}
+<label for="{{ name }}" class="block text-left mt-4">
+    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
+        autocomplete="postal-code">
 </label>
 {% endmacro %}
 
