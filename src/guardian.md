@@ -9,25 +9,25 @@ Being a Guardian Home is the same as fostering. We use the phrase <i>Guardian Ho
 message that you will be guarding a precious soul in your home. These dogs have been through so much and
 experience so much change that emotionally, they can be very fragile.
 <blockquote>
-    You will be giving a rescued dog or cat a positive environment so that they can have the emotional stability
+    You will be giving a rescued dog or cat a positive environment so they can have the emotional stability
     they need to thrive.
 </blockquote>
 
 ## What We Provide
-The Foundation will your home the following:
+The Foundation will provide your home with the following:
 
-- We will provide a high quality food for the animal
-- We can assist in taking the animal for vet visits
-- We can provide daycare options while your family attends school and work
-- We will provide private or group training classes <i>(dogs only)</i>
-- Anything needed for the animal
--- Leash
--- Collar
--- Long Lines
--- Treats
--- Toys
--- Bedding
--- Crate
+- High quality food for the animal
+- Assist in taking the animal for vet visits
+- Daycare options while your family attends school and work
+- Private or group training classes <i>(dogs only)</i>
+- other items for the animal
+    - Leash
+    - Collar
+    - Long Lines
+    - Treats
+    - Toys
+    - Bedding
+    - Crate
 
 ## What Is Required
 You will be required to provide the following:
