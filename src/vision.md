@@ -22,8 +22,8 @@ that it returns, but they were not able to perform as many procedures needed to 
 
 
 __Status Update__
-> We have started the conversation on the subject of our Low Cost/Free spay and neuter program. We have spoken with an individual that has experience in Spay & Neuter programs and is willing to help us get this project off the ground. We are also in the process of contacting local _(within a 30 mile
-radius)_ vets that would willing to coordinate with us on performing the operations.
+> We have started the conversation on the subject of our Low Cost/Free spay and neuter program. We have spoken with Danyel Smith,  who has experience in Spay & Neuter programs and is willing to help us get this project off the ground. We are also in the process of contacting local vets _(within a 30 mile
+radius)_ that would willing to coordinate with us on performing the operations.
 
 
 ### Training
