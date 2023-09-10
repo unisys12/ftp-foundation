@@ -25,7 +25,7 @@
             <a href="/guardian"
                 class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Become
                 a Guardian</a>
-            <a href="/"
+            <a href="/donate"
                 class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Donate</a>
         </nav>
     </header>
@@ -33,6 +33,7 @@
         {{ content | safe }}
         <div class="mx-auto">
             <img src="{{ '/assets/imgs/ftpf_logo.jpg' | url }}" class="" alt="Foundation Logo">
+            {% include "components/donate_qr.html" %}
         </div>
     </main>
     <footer
