@@ -8,6 +8,10 @@
     <title>FTP Foundation</title>
     <link rel="shortcut icon" href="{{ '/favicon.ico' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+    {# {{ page.url | log }} #}
+    {% if page.url === "/donate/" %}
+    <script src=https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js></script>
+    {% endif %}
 </head>
 
 <body class="container mx-auto my-2">
