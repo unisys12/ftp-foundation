@@ -22,17 +22,7 @@ page_description: 'Test description'
             </h1>
         <img src="{{ '/assets/imgs/ftpf_logo.jpg' | url }}" class="screen:hidden max-h-24 mx-auto" />
         </div>
-        <nav class="sm:flex mt-2 sm:space-x-8 flex-col sm:flex-row text-center print:hidden">
-            <a href="/"
-                class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Home</a>
-            <a href="/mission"
-                class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Mission</a>
-            <a href="/guardian"
-                class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Become
-                a Guardian</a>
-            <a href="/donate"
-                class="py-4 px-1 inline-flex items-center gap-2 text-md whitespace-nowrap text-gray-700 hover:text-gray-800 duration-300">Donate</a>
-        </nav>
+        {% include "components/header_nav.html" %}
     </header>
     <main class="grid grid-flow-row sm:grid-cols-3 text-center mt-8 gap-4">
         <div class="sm:col-span-2 flex flex-row flex-wrap justify-center gap-4">
@@ -50,32 +40,7 @@ page_description: 'Test description'
         <p class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
             © 2023 For The Puppies Foundation
         </p>
-        <ul class="flex flex-wrap items-center gap-y-2 gap-x-8 print:hidden">
-            <li>
-                <a href="/about"
-                    class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
-                    About Us
-                </a>
-            </li>
-            <li>
-                <a href="/minutes"
-                    class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
-                    Meeting Minutes
-                </a>
-            </li>
-            <li>
-                <a href="/vision"
-                    class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
-                    Vision
-                </a>
-            </li>
-            <li>
-                <a href="/contact"
-                    class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
-                    Contact Us
-                </a>
-            </li>
-        </ul>
+        {% include "components/footer_nav.html" %}
     </footer>
 </body>
 
