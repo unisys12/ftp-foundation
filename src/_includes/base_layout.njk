@@ -36,6 +36,9 @@ page_description: 'Test description'
     <main class="grid grid-flow-row sm:grid-cols-3 text-center mt-8 gap-4">
         <div class="sm:col-span-2 flex flex-row flex-wrap justify-center gap-4">
             <article class="prose mx-4 lg:prose-xl text-left">
+                {% if page.url === "/adoption/" %}
+                <script src="https://toolkit.rescuegroups.org/j/3/wNAvfXbg/toolkit.js"></script>
+                {% endif %}
                 {{ content | safe }}
             </article>
         </div>
