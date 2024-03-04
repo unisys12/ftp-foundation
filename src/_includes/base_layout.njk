@@ -24,15 +24,7 @@ page_description: 'Test description'
 </head>
 
 <body class="container mx-auto my-2">
-    <header class="grid sm:grid-cols-2">
-        <div class="sm:col-span-1">
-            <h1 class="text-3xl font-semibold text-center">
-                For The Puppies Foundation
-            </h1>
-        <img src="{{ '/assets/imgs/ftpf_logo.jpg' | url }}" class="screen:hidden max-h-24 mx-auto" />
-        </div>
-        {% include "components/header_nav.html" %}
-    </header>
+    {% include "components/header.html" %}
     <main class="grid grid-flow-row sm:grid-cols-3 text-center mt-8 gap-4">
         <div class="sm:col-span-2 flex flex-row flex-wrap justify-center gap-4">
             <article class="prose mx-4 lg:prose-xl text-left">
@@ -47,14 +39,7 @@ page_description: 'Test description'
             {% include "components/donate_qr.html" %}
         </div>
     </main>
-    <footer
-        class="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center md:justify-between">
-        <p class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
-            © 2023 For The Puppies Foundation
-        </p>
-        <p class="font-semibold">EIN: 93-2482326</p>
-        {% include "components/footer_nav.html" %}
-    </footer>
+    {% include "components/footer.html" %}
 </body>
 
 </html>
