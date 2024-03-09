@@ -2,6 +2,11 @@ module.exports = (config) => {
   config.setServerOptions({
     // Whether DOM diffing updates are applied where possible instead of page reloads
     domDiff: false,
+    // Use a local key/certificate to opt-in to local HTTP/2 with https
+    https: {
+      key: "./localhost.key",
+      cert: "./localhost.cert",
+    },
   });
 
   config.addPassthroughCopy("src/assets/imgs/*.jpg");
