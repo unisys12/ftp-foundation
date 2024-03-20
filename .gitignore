@@ -3,3 +3,4 @@ _site
 localhost.cert
 localhost.key
 .cache
+.env

@@ -1,7 +1,7 @@
 const Fetch = require("@11ty/eleventy-fetch");
-
+require('dotenv').config()
 module.exports = async () => {
-    let url = "https://api.rescuegroups.org/v5/public/orgs/11256/animals/search/available/";
+    let url = `https://api.rescuegroups.org/v5/public/orgs/${process.env.ORG_ID}/animals/search/available/`;
     let body = {
         "data": {
           "filterRadius": {
@@ -18,7 +18,7 @@ module.exports = async () => {
             fetchOptions: {
                 method: "POST",
                 headers: {
-                    'Authorization': "DXYRIHS8",
+                    'Authorization': `${process.env.RESCUE_GROUPS_API_KEY}`,
                     'Content-Type': "application/vnd.api+json"
                 },
                 body: JSON.stringify(body)

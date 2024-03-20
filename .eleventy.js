@@ -1,5 +1,5 @@
 const Fetch = require("@11ty/eleventy-fetch");
-
+require('dotenv').config()
 module.exports = (config) => {
   config.setServerOptions({
     // Whether DOM diffing updates are applied where possible instead of page reloads
@@ -46,7 +46,7 @@ module.exports = (config) => {
   };
 
   async function selectedDog(id) {
-    let url = `https://api.rescuegroups.org/v5/public/orgs/11256/animals/${id}`;
+    let url = `https://api.rescuegroups.org/v5/public/orgs/${process.env.ORG_ID}/animals/${id}`;
 
     try {
         return await Fetch(url, {
@@ -55,7 +55,7 @@ module.exports = (config) => {
             fetchOptions: {
                 method: "GET",
                 headers: {
-                    'Authorization': "DXYRIHS8",
+                    'Authorization': `${process.env.RESCUE_GROUPS_API_KEY}`,
                     'Content-Type': "application/vnd.api+json"
                 }
             }
