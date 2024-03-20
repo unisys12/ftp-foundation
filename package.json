@@ -1,6 +1,6 @@
 {
   "name": "ftp-foundation",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Site for the non-profit For The Puppies Foundation",
   "main": "_site/index.html",
   "engines": {
