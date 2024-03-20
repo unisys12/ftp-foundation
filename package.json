@@ -3,6 +3,9 @@
   "version": "0.0.2",
   "description": "Site for the non-profit For The Puppies Foundation",
   "main": "_site/index.html",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "11ty-dev": "npx @11ty/eleventy --serve",
     "11ty-build": "npx @11ty/eleventy",
@@ -13,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "\"\""
+    "url": "https://github.com/unisys12/ftp-foundation"
   },
   "author": "Phillip Jackson",
   "license": "ISC",
