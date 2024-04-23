@@ -8,24 +8,21 @@ pagination:
 permalink: "dogs/{{ dog.id }}/"
 description: Adoption information for {{ dog.attributes.name }}
 ---
-
-<section>
-    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <header class="text-center">
-            <div class="abg-orange-400 mx-auto w-fit overflow-hidden rounded-[6rem] rounded-br-none rounded-tl-none">
-                <img src="{{ dog.attributes.pictureThumbnailUrl }} max-w-lg">
-           </div>
-            <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">{{ dog.attributes.name }}</h2> 
-            <p class="mx-auto mt-4 max-w-md text-gray-500">{{ dog.attributes.descriptionText | safe }}</p>
-        </header>  
-        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {% currentDog dog.id %}      
+<div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header class="text-center">
+        <div class="abg-orange-400 mx-auto w-fit overflow-hidden rounded-[6rem] rounded-br-none rounded-tl-none">
+            <img src="{{ dog.attributes.pictureThumbnailUrl }} max-w-lg">
         </div>
-        <div class="mt-10 flex flex-col items-center md:flex-row">
-            <a href="/adoption" 
-            class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-green-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
-            Apply to Adopt {{ dog.attributes.name }}
-            </a>
-        </div>
+        <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">{{ dog.attributes.name }}</h2> 
+        <p class="mx-auto mt-4 max-w-md text-gray-500">{{ dog.attributes.descriptionText | safe }}</p>
+    </header>  
+    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {% currentDog dog.id %}      
     </div>
-</section>
+    <div class="mt-10 flex flex-col items-center md:flex-row">
+        <a href="/adoption" 
+        class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-green-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
+        Apply to Adopt {{ dog.attributes.name }}
+        </a>
+    </div>
+</div>
