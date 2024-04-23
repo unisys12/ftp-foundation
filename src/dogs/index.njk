@@ -5,11 +5,11 @@ page_description: 'Dogs avaliable for adoption through For The Puppies Foudantio
 <div class="grid sm:grid-cols-3 not-prose gap-10">
 {%- for dog in dogs['data'] %}
     <section class="grid grid-cols-subgrid justify-center place-items-center hover:cursor-help" #id="card-{{ loop.index }}">
-        <h2 class="text-2xl text-center">{{ dog.attributes.name }}</span>
+        <h2 class="text-2xl text-center font-medium mt-4">{{ dog.attributes.name }}</span>
         <a href="/dogs/{{ dog.id }}">
             <img src="{{ dog.attributes.pictureThumbnailUrl }}" alt="{{ dog.attributes.name }}" class="mx-auto">
         </a>
-        <span class="text-sm">{{ dog.attributes.breedString }}</span>
+        <span class="text-sm font-normal">{{ dog.attributes.breedString }}</span>
     </section>
     {%- endfor %}
 </div>
