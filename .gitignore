@@ -4,3 +4,4 @@ localhost.cert
 localhost.key
 .cache
 .env
+.dev.vars
