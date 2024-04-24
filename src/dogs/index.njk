@@ -2,14 +2,16 @@
 layout: 'base_layout.njk'
 page_description: 'Dogs avaliable for adoption through For The Puppies Foudantion, Inc'
 ---
-<div class="grid sm:grid-cols-3 not-prose gap-10">
+<div class="not-prose grid sm:grid-cols-2 place-content-center gap-4 pb-4">
     {%- for dog in dogs['data'] %}
-    <section class="grid grid-cols-subgrid justify-center place-items-center hover:cursor-help" #id="card-{{ loop.index }}">
-        <h2 class="text-2xl text-center">{{ dog.attributes.name }}</span>
+    <section 
+    class="border border-solid border-red-500 shadow-sm shadow-blue-500/50 hover:cursor-help hover:shadow-md" 
+    #id="card-{{ loop.index }}">
+        <h2 class="text-2xl font-bold text-center">{{ dog.attributes.name }}</span>
         <a href="/dogs/{{ dog.id }}">
-            <img src="{{ dog.attributes.pictureThumbnailUrl }}" alt="{{ dog.attributes.name }}" class="mx-auto">
+            <img src="{{ dog.attributes.pictureThumbnailUrl }}" alt="{{ dog.attributes.name }}" height="80px" class="mx-auto max-h-20">
         </a>
-        <span class="text-sm">{{ dog.attributes.breedString }}</span>
+        <span class="text-sm font-medium">{{ dog.attributes.breedString }}</span>
     </section>
     {%- endfor %}
 </div>
