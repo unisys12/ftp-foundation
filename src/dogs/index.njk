@@ -3,7 +3,7 @@ layout: 'base_layout.njk'
 page_description: 'Dogs avaliable for adoption through For The Puppies Foudantion, Inc'
 ---
 <div class="not-prose grid sm:grid-cols-2 place-content-center gap-4 pb-4">
-    {%- for dog in dogs['data'] %}
+    {% for dog in dogs['data'] -%}
     <section 
     class="border border-solid border-red-500 shadow-sm shadow-blue-500/50 hover:cursor-help hover:shadow-md" 
     #id="card-{{ loop.index }}">
