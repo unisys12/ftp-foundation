@@ -11,11 +11,13 @@ module.exports = (config) => {
   config.addPassthroughCopy("src/favicon.ico");
 
   const imgComponent = (img) => {
-    return `<img
-              src="${img.attributes.original.url}"
-              alt="foster image"
-              class="object-fit rounded-md shadow-md shadow-black"
-            />`          
+    return `<sl-carousel-item>
+              <img
+                src="${img.attributes.original.url}"
+                alt="foster image"
+                class="object-contain"
+              />
+            </sl-carousel-item>`  
   }
 
   config.addAsyncShortcode("currentDog", async function(id) {

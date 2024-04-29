@@ -20,7 +20,9 @@ description: Adoption information for {{ dog.attributes.name }}
         <p class="text-gray-700 leading-tight">{{ dog.attributes.descriptionText | safe }}</p>
     </article>
     <div class="mt-4 flex flex-wrap items-center justify-center gap-4">
+        <sl-carousel autoplay loop pagination>
             {% currentDog dog.id %}
+        </sl-carousel>
         <div class="my-4 mx-auto">
             <a href="/adoption" 
             class="h-12 w-full text-center rounded bg-green-600 px-6 py-3 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
