@@ -4,20 +4,23 @@ module.exports = (config) => {
   config.setServerOptions({
     // Whether DOM diffing updates are applied where possible instead of page reloads
     domDiff: false,
-    // Use a local key/certificate to opt-in to local HTTP/2 with https
-    // https: {
-    //   key: "./localhost.key",
-    //   cert: "./localhost.cert",
-    // },
   });
 
   config.addPassthroughCopy("src/assets/imgs/*.jpg");
   config.addPassthroughCopy("src/assets/imgs/*.png");
   config.addPassthroughCopy("src/favicon.ico");
 
-  config.addAsyncShortcode("currentDog", async (id) => {
+  const imgComponent = (img) => {
+    return `<img
+              src="${img.attributes.original.url}"
+              alt="foster image"
+              class="object-fit rounded-md shadow-md shadow-black"
+            />`          
+  }
+
+  config.addAsyncShortcode("currentDog", async function(id) {
     const res = await selectedDog(id);
-    let pictures = new Array;
+    let pictures = [];
     const selectedID = res.data.map((x) => x.id);
     
     res.included.map((items) => {
@@ -26,14 +29,7 @@ module.exports = (config) => {
       }
     });
       
-    return pictures.map((x) => `
-      <div class="group block overflow-hidden">
-        <img
-          src="${x.attributes.original.url}"
-          alt="foster image"
-          class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-auto"
-        />
-      </div>`)
+    return pictures.map((x) => imgComponent(x));
   });
 
   return {
