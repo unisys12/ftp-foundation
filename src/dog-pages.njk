@@ -15,6 +15,11 @@ description: Adoption information for {{ dog.attributes.name }}
             <img src="{{ dog.attributes.pictureThumbnailUrl }} max-w-fit" class="rounded-md shadow-md shadow-zinc-500 hover:shadow-sm transition-shadow ease-in-out duration-500" >
             <h2 class="text-center py-2 text-xl font-bold text-gray-900 sm:text-3xl">{{ dog.attributes.name }}</h2> 
        </div>
+       {% if dog.attributes.isSpecialNeeds %}
+        <div class="mt-1 mx-auto">
+            <sl-badge variant="primary" pulse>Special Needs</sl-badge>
+        </div>
+        {% endif %}
     </header>
     <article class="mx-auto mt-4 max-w-xl">
         <p class="text-gray-700 leading-tight">{{ dog.attributes.descriptionText | safe }}</p>

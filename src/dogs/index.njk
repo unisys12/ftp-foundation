@@ -11,6 +11,13 @@ page_description: 'Dogs avaliable for adoption through For The Puppies Foudantio
         <a href="/dogs/{{ dog.id }}">
             <img src="{{ dog.attributes.pictureThumbnailUrl }}" alt="{{ dog.attributes.name }}" height="80px" class="mx-auto max-h-20">
         </a>
+        {% if dog.attributes.isSpecialNeeds %}
+        <div class="mt-1">
+            <sl-tooltip content="{{ dog.attributes.specialNeedsDetails }}">
+                <sl-badge variant="primary" pulse>Special Needs</sl-badge>
+            </sl-tooltip>
+        </div>
+        {% endif %}
         <span class="text-sm font-medium">{{ dog.attributes.breedString }}</span>
     </section>
     {%- endfor %}
