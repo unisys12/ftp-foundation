@@ -1,6 +1,6 @@
 ---
 layout: base_layout.njk
-page_description: 'FTPF Vision Overview'
+page_description: 'For The Puppies Foundation Vision Overview'
 ---
 
 ## Vision

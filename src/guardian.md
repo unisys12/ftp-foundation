@@ -1,6 +1,6 @@
 ---
 layout: 'base_layout.njk'
-page_description: 'How to become a Guardian Home for FTPF'
+page_description: 'How to become a Guardian Home for For The Puppies Foundation'
 ---
 
 ## Guardian Home
