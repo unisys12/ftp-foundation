@@ -1,18 +1,36 @@
 ---
-layout: 'landing_layout.njk'
+layout: 'base_layout.njk'
 page_description: 'For The Puppies Foundation Donation page'
 ---
-<div class="col-span-2 grid grid-cols-1 gap-6 justify-start items-start">
-    <h3 class="font-semibold text-gray-700 text-2xl">Make a Donation</h3>
-    <p>Making a tax-deductible donation to our Foundation, of any amount, will go a long way towards providing quality care for the animals in our care and in our Guardian Homes. When clicking either the Donate button or follwoing the mobile QR code, you will be presented with a form. This form will allow you to setup a one-time or monthely donation. You have the option to select one of the preset amounts or you can enter a custom amount.</p>
-    <p class="p-4 bg-cyan-600 font-semibold rounded-md">We use <a href="https://www.zeffy.com/" class="text-slate-200 underline hover:text-slate-50 ease-in-out duration-300">Zeffy</a> for all of our donation collections. Zeffy allows us to recieve 100 percent of what you donate and you will get a tax reciept as soon as you submit your donation. No need for you to wait until the end of the year and hope we send you one.</p>
+<div class="col-span-2 grid grid-cols-1 justify-start items-start">
+    <header>
+        <h3 class="font-semibold text-gray-700 text-2xl">Make a Donation</h3>
+    </header>
+    <article>
+        <p>Making a tax-deductible donation to our Foundation, of any amount, will go a long way towards providing
+            quality care for the animals in our care and in our Guardian Homes. The widget below is specifically
+            for a campaign to get a Spay & Neuter program started for our county and surrounding areas within MS.
+        </p>
+        <p>
+            This program will be for residence of Mississippi and targeting the Northeast portion of the state.
+            Our county, Alcorn, does not have a low-cost veterinarian option. Nor does it have a healthy/viable Spay &
+            Neuter Program option. And we want to remedy that!
+        </p>
+        <givebutter-widget id="gGBx7L"></givebutter-widget>
+    </article>
     <div class="text-left">
-        <p class="font-medium mb-4">This donation will help a lot to achieve our mission. We'll be able to :</p>
-        <ul>
-            <li>Cover the costs associated with general vet care (monthly preventives, vaccinations, medications and office visits)</li>
-            <li>Cover the costs of spaying and neutering, which is required before adoption.</li>
-            <li>Getting new Guardian Homes setup with a supply of high quality food, crate, leash, collar, toys and bed.</li>
-        </ul>
+        <article>
+            <p class="font-medium mb-4">This donation will help us get this new program started and keep it going!</p>
+
+            <ul>
+                <li>You will be required to pay a fee of $50</li>
+                <li>All procedures will be performed in a veterinarian clinic closest to your location or your current
+                    vet of choice.</li>
+                <li>We will handle making the appointment, after speaking with you on your responsibilities related to
+                    the program.</li>
+                <li>We ask that you be responsible for getting your dog or cat to the safely to and from the
+                    appointment.</li>
+            </ul>
+        </article>
     </div>
-    {% include "components/donate_button.html" %}
 </div>
