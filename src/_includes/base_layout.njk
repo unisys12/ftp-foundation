@@ -15,15 +15,19 @@ page_description: 'Test description'
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7T6XRCD0LQ"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-7T6XRCD0LQ');
+        gtag('config', 'G-7T6XRCD0LQ');
     </script>
     {% if '/dogs/' in page.url %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
+    {% endif %}
+    {% if '/donate/' in page.url %}
+    <script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=8VuptvZqPuoDFArI&p=other"></script>
     {% endif %}
 </head>
 
@@ -42,7 +46,8 @@ page_description: 'Test description'
     </main>
     {% include "components/footer.html" %}
     {% if '/dogs/' in page.url %}
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/components/carousel-item/carousel-item.js"></script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/components/carousel-item/carousel-item.js"></script>
     {% endif %}
 </body>
 
