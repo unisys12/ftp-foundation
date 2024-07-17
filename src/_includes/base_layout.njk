@@ -9,6 +9,11 @@ page_description: 'Test description'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ page_description }}">
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.forthepuppiesfoundation.org" />
+    <meta property="og:description" content="{{ page_description }}" />
+    <meta property="og:image" content="{{ '/assets/imgs/ftpf_logo.jpg' | url }}" />
     <title>{{title}}</title>
     <link rel="shortcut icon" href="{{ '/favicon.ico' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
@@ -23,8 +28,7 @@ page_description: 'Test description'
     </script>
     {% if '/dogs/' in page.url %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
-    <script type="module"
-        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
     {% endif %}
     {% if '/donate/' in page.url %}
     <script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=8VuptvZqPuoDFArI&p=other"></script>
@@ -46,8 +50,7 @@ page_description: 'Test description'
     </main>
     {% include "components/footer.html" %}
     {% if '/dogs/' in page.url %}
-    <script type="module"
-        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/components/carousel-item/carousel-item.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/components/carousel-item/carousel-item.js"></script>
     {% endif %}
 </body>
 
