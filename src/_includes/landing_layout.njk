@@ -1,15 +1,20 @@
+---
+title: "Home Page"
+page_description: "Provide local rescue communities with reliable fosters, evaluation and training of rescue dogs and cats thereby enhancing their successful adoption rates."
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Provide local rescue communities with reliable fosters, evaluation and training of rescue dogs and cats thereby enhancing their successful adoption rates.">
-    <meta property="og:title" content="For The Puppies Foundation Home Page" />
+    <meta name="description" content="{{ page_description }}">
+    <meta property="og:title" content="{{ title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.forthepuppiesfoundation.org" />
-    <meta property="og:description" content="Provide local rescue communities with reliable fosters, evaluation and training of rescue dogs and cats thereby enhancing their successful adoption rates." />
-    <meta property="og:image" content="{{ '/assets/imgs/ftpf_logo_small.webp' | url }}" />
+    <meta property="og:url" content="https://www.forthepuppiesfoundation.org{{ page.url }}" />
+    <meta property="og:description" content="{{ page_description }}" />
+    <meta property="og:image" content="https://www.forthepuppiesfoundation.org{{ '/assets/imgs/ftpf_logo_small.webp' | url }}" />
     <title>FTP Foundation</title>
     <link rel="shortcut icon" href="{{ '/favicon.ico' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
