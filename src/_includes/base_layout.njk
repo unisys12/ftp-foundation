@@ -26,7 +26,7 @@ title: "FTP Foundation"
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
     {% endif %}
-    {% if '/donate/' in page.url %}
+    {% if '/donate/' or '/dogs/' in page.url %}
     <script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=8VuptvZqPuoDFArI&p=other"></script>
     {% endif %}
 </head>
