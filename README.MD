@@ -48,3 +48,7 @@ All sponsorships and donations will be collected through Givebutter. We are util
     button: "gJKN4p",
 },
 ```
+
+## Sponsorship Tracking
+
+What if I want to do something when the Goal Progress Bar is 100%. Need to look into accessing the shadow-dom since LitHTML is used for the Givebutter widgets.
