@@ -4,21 +4,26 @@ page_description: 'Dogs available for adoption through For The Puppies Foundatio
 ---
 <div class="not-prose grid sm:grid-cols-2 place-content-center gap-4 pb-4">
     {% for dog in dogs['data'] -%}
-    <section
-    class="border border-solid  shadow-sm shadow-blue-500/50 hover:cursor-help hover:shadow-md" 
-    #id="card-{{ loop.index }}">
+    <section class="border border-solid  shadow-sm shadow-blue-500/50 hover:cursor-help hover:shadow-md" #id="card-{{ loop.index }}">
         <h2 class="text-2xl font-bold text-center">{{ dog.attributes.name }}</span>
-        <a href="/dogs/{{ dog.id }}">
-            <img src="{{ dog.attributes.pictureThumbnailUrl }}" alt="{{ dog.attributes.name }}" height="80px" class="mx-auto max-h-20">
-        </a>
-        {% if dog.attributes.isSpecialNeeds %}
-        <div class="mt-1">
-            <sl-tooltip content="{{ dog.attributes.specialNeedsDetails }}">
-                <sl-badge variant="primary" pulse>Special Needs</sl-badge>
-            </sl-tooltip>
-        </div>
-        {% endif %}
-        <span class="text-sm font-medium">{{ dog.attributes.breedString }}</span>
+            <a href="/dogs/{{ dog.id }}">
+                <img src="{{ dog.attributes.pictureThumbnailUrl }}" alt="{{ dog.attributes.name }}" height="80px" class="mx-auto max-h-20">
+            </a>
+            {% if dog.attributes.isSpecialNeeds %}
+            <div class="mt-1">
+                <sl-tooltip content="{{ dog.attributes.specialNeedsDetails }}">
+                    <sl-badge variant="primary" pulse>Special Needs</sl-badge>
+                </sl-tooltip>
+            </div>
+            {% endif %}
+            {% for id in sponsor_ids %}
+            {% if dog.attributes.name === id.name %}
+            <div class="badge-pulse">
+                <sl-badge variant="success" pill pulse>Sponsor Me!</sl-badge>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <span class="text-sm font-medium">{{ dog.attributes.breedString }}</span>
     </section>
     {%- endfor %}
 </div>
