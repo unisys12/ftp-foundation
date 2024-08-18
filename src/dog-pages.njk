@@ -30,6 +30,7 @@ page_description: Adoption information for {{ dog.attributes.name }}
             {% currentDog dog.id %}
         </sl-carousel>
         <div class="my-4 mx-auto flex flex-wrap justify-center items-center gap-2">
+            {% include 'components/petbucket.html' %}
             {% for id in sponsor_ids %}
                 {% if dog.attributes.name === id.name %}
                 <givebutter-widget id="{{ id.goal }}"></givebutter-widget>
