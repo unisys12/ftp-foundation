@@ -1,0 +1,56 @@
+---
+title: "FTP Foundation"
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "components/meta.njk" %} 
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+    <script>
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        posthog.init('phc_erXdGgXXbvGV17A3ft5BcpKS7WC9KztqOGqYG73g2kx', {
+            api_host: 'https://us.i.posthog.com', person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+        })
+    </script>
+</head>
+
+<body class="container mx-auto my-2">
+    {% include "components/header.html" %}
+    <main class="grid grid-flow-row sm:grid-cols-3 text-center mt-8 gap-4">
+        <div class="sm:col-span-2 gap-4">
+            <article class="prose mx-4 lg:prose-xl text-left">
+                {{ content | safe }}
+            </article>
+        </div>
+        <div class="mx-auto print:hidden">
+            <img src="{{ '/assets/imgs/ftpf_logo.jpg' | url }}" class="" alt="Foundation Logo">
+            {% include "components/donate_qr.html" %}
+        </div>
+    </main>
+    {% include "components/footer.html" %}
+    <script>
+        const noElement = document.querySelector('#home-ownership-no');
+        const yesElement = document.querySelector('#home-ownership-yes');
+        const infoElement = document.querySelector('#landlord-info');
+        let display;
+        noElement.addEventListener('click', (e) => {
+        display = infoElement.classList.contains('hidden');
+            if (display) {
+                infoElement.classList.remove('hidden')
+                infoElement.classList.add('block')
+            }
+        })
+
+        yesElement.addEventListener('click', (e) => {
+        display = infoElement.classList.contains('block');
+            if (display) {
+                infoElement.classList.remove('block')
+                infoElement.classList.add('hidden')
+            }
+        })
+    </script>
+</body>
+
+</html>
