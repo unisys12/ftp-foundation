@@ -1,0 +1,49 @@
+{% import "components/forms.html" as form %}
+
+<form name="gaurdian_form" netlify>
+  <fieldset class="border-2 border-black/50 rounded-sm p-2">
+    <legend class="font-bold">
+      <h3 class="inline px-2">Guardian Home Application</h3>
+    </legend>
+    <div class="grid grid-cols-1 gap-6">
+        <fieldset class="border-2 border-black/50 rounded-sm p-2">
+          <legend class="font-bold px-2">Contact Information</legend>
+          {{ form.name_input('text' ,'name') }} 
+          {{ form.street_input('text','street address') }} 
+          {{ form.city_input('text' ,'city') }} 
+          {{ form.state_input('text' ,'state') }} 
+          {{ form.zip_input('text' ,'zip') }} 
+          {{ form.input('email' ,'email') }}
+        </fieldset>
+        <fieldset class="border-2 border-black/50 rounded-sm p-2">
+          <legend class="font-bold">Personal Information</legend>
+          <p class="font-xs leading-6">
+            The following are not designed to <i>disqualify</i> perspective
+            applicants. Your answers will allow us to place a dog or cat that
+            fits your home and family lifestyle. Check only the boxes below that
+            apply to you and your family.
+          </p>
+
+          {{ form.boolean('Do you currently own two or more dogs or cats that
+          live in your home?', 'multi dog') }} 
+          {{ form.boolean('Do you currently
+          have any portion of your yard fenced off?', 'fenced-yard') }} 
+          {{ form.boolean('Bringing a new dog or cat into your home can be a big
+          commitment and change to your normal routine. Are you and your family
+          willing to accept these new responsibilities and accepting of the
+          changes to your normal routines during this time?',
+          'accepting-change') }} 
+          {{ form.boolean('Are you willing to housebreak
+          a puppy or dog?', 'housebreak') }} 
+          {{ form.boolean('Do you currently
+          have children living in your home?', 'Children living in home') }} 
+          {{ form.boolean('Are there children that frequently visit your home?', 'children visit') }}
+          {{ form.boolean('Can you attest that you or anyone else living in your home have not been convicted of Animal Cruelty (as cited in MS Code § 97-41-16 (2023))?', 'animal cruelty') }}
+          <button type="submit"
+            class="bg-[#0023FB] hover:bg-blue-800 px-5 py-2 rounded-md text-zinc-50 hover:text-gray-50 hover:shadow-sm transition-all duration-300 mb-4">
+            Submit
+          </button>
+        </fieldset>
+    </div>
+  </fieldset>
+</form>

@@ -1,0 +1,39 @@
+---
+layout: "form_layout.njk"
+page_description: "Application for adoption through For The Puppies Foundation, Inc"
+---
+
+{% import "components/forms.html" as form %}
+<div class="grid col-span-2 gap-6 max-w-2xl">
+  <form name="adoption-form" id="adoption-form" netlify>
+    <fieldset class="border-2 border-black/50 rounded-sm p-2">
+      <legend class="font-bold px-2">
+        <h3 class="inline">Adoption Application</h3>
+      </legend>
+      <fieldset name="contact information" class="border-2 border-black/50 rounded-sm p-2">
+        <legend class="font-bold px-2">Contact Information</legend>
+        {{ form.name_input('text' ,'name') }}
+        {{ form.city_input('text','city') }} 
+        {{ form.state_input('text' ,'state') }} 
+        {{ form.zip_input('text' ,'zip') }} 
+        {{ form.input('email' ,'email') }}
+        {{ form.tel_input() }}
+      </fieldset>
+
+      <fieldset class="border-2 border-black/50 rounded-sm p-2">
+        <legend class="font-bold px-2">
+          Household Information
+        </legend>
+        {{ form.boolean('Do you currently own your home?', 'home ownership') }}
+        <label for="landlord_contact" class="hidden text-left" id="landlord-info">
+          <span class="text-gray-700 text-sm">If you answered yes to the above question only!</span>
+          {{ form.name_input('text', 'landlord_name') }}
+          {{ form.tel_input() }}
+        </label>
+        {{ form.boolean('Can you attest that you or anyone else living in your home have not been convicted of Animal Cruelty (as cited in MS Code § 97-41-16 (2023))?', 'animal cruelty') }}
+        
+      </fieldset>
+
+    </fieldset>
+  </form>
+</div>

@@ -1,67 +1,109 @@
-{# General / Dynamic use only. AC may break #}
-{% macro input(type, name) %}
+{# General / Dynamic use only. AC may break #} {% macro input(type, name) %}
 <label for="{{ name }}" class="block text-left mt-4">
-    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
-    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
-        autocomplete="{{ type | slug }}">
+  <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+  <input
+    type="{{ type }}"
+    name="{{ name }}"
+    id="{{ name }}"
+    class="block w-full rounded-md"
+    autocomplete="{{ type | slug }}"
+  />
 </label>
-{% endmacro %}
-
-{% macro name_input(type, name) %}
+{% endmacro %} {% macro name_input(type, name) %}
 <label for="{{ name }}" class="block text-left mt-4">
-    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
-    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md" autocomplete="name">
+  <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+  <input
+    type="{{ type }}"
+    name="{{ name }}"
+    id="{{ name }}"
+    class="block w-full rounded-md"
+    autocomplete="name"
+  />
 </label>
-{% endmacro %}
-
-{% macro street_input(type, name) %}
+{% endmacro %} {% macro street_input(type, name) %}
 <label for="{{ name }}" class="block text-left mt-4">
-    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
-    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
-        autocomplete="street-address">
+  <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+  <input
+    type="{{ type }}"
+    name="{{ name }}"
+    id="{{ name }}"
+    class="block w-full rounded-md"
+    autocomplete="street-address"
+  />
 </label>
-{% endmacro %}
-
-{% macro city_input(type, name) %}
+{% endmacro %} {% macro city_input(type, name) %}
 <label for="{{ name }}" class="block text-left mt-4">
-    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
-    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
-        autocomplete="address-level2">
+  <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+  <input
+    type="{{ type }}"
+    name="{{ name }}"
+    id="{{ name }}"
+    class="block w-full rounded-md"
+    autocomplete="address-level2"
+  />
 </label>
-{% endmacro %}
-
-{% macro state_input(type, name) %}
+{% endmacro %} {% macro state_input(type, name) %}
 <label for="{{ name }}" class="block text-left mt-4">
-    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
-    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
-        autocomplete="address-level1">
+  <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+  <input
+    type="{{ type }}"
+    name="{{ name }}"
+    id="{{ name }}"
+    class="block w-full rounded-md"
+    autocomplete="address-level1"
+  />
 </label>
-{% endmacro %}
-
-{% macro zip_input(type, name) %}
+{% endmacro %} {% macro zip_input(type, name) %}
 <label for="{{ name }}" class="block text-left mt-4">
-    <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
-    <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md"
-        autocomplete="postal-code">
+  <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+  <input
+    type="{{ type }}"
+    name="{{ name }}"
+    id="{{ name }}"
+    class="block w-full rounded-md"
+    autocomplete="postal-code"
+  />
 </label>
-{% endmacro %}
-
-{% macro submit() %}
-<button type="submit"
-    class="bg-[#0023FB] hover:bg-blue-800 px-6 py-3 my-4 rounded-md text-zinc-50 hover:text-gray-50 hover:shadow-sm transition-all duration-300 mb-4">Submit</button>
-{% endmacro %}
-
-{% macro boolean(question, name) %}
-<div class="block">
-    <div class="mt-2">
-        <label class="inline-flex items-center" for="{{ name | slug}}">
-            <div class="flex items-center space-x-2">
-                <span>Yes</span><input type="checkbox" name="{{ name }}" id="{{ name | slug }}" value="yes">
-            </div>
-            <div class="ml-2 p-2">
-                <p>{{ question }}</p>
-            </div>
-        </label>
-    </div>
-</div>
+{% endmacro %} {% macro tel_input() %}
+<label class="block text-left mt-4" for="telephone">
+  <span class="text-gray-700 font-semibold text-xl">Telephone:</span>
+  <span class="text-gray-700 text-sm">Format: 123-456-7890</span>
+  <input
+    type="tel"
+    name="telephone"
+    id="telephone"
+    class="block w-full rounded-md"
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+    required
+  />
+</label>
+{% endmacro %} {% macro submit() %}
+<button
+  type="submit"
+  class="bg-[#0023FB] hover:bg-blue-800 px-6 py-3 my-4 rounded-md text-zinc-50 hover:text-gray-50 hover:shadow-sm transition-all duration-300 mb-4"
+>
+  Submit
+</button>
+{% endmacro %} {% macro boolean(question, name) %}
+<label class="inline-flex items-center" for="{{ name | slug}}">
+  <div class="ml-2 p-2">
+    <p>{{ question }}</p>
+  </div>
+  <div class="flex items-center space-x-2">
+    <span class="font-medium">Yes</span>
+    <input
+      type="radio"
+      name="{{ name | slug }}"
+      id="{{ name | slug }}-yes"
+      value="yes"
+    />
+    <span class="font-medium">No</span>
+    <input
+      type="radio"
+      name="{{ name | slug }}"
+      id="{{ name | slug }}-no"
+      value="no"
+    />
+  </div>
+</label>
 {% endmacro %}
