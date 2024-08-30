@@ -18,6 +18,7 @@
     id="{{ name }}"
     class="block w-full rounded-md"
     autocomplete="name"
+    required
   />
 </label>
 {% endmacro %} {% macro street_input(type, name) %}
@@ -29,6 +30,7 @@
     id="{{ name }}"
     class="block w-full rounded-md"
     autocomplete="street-address"
+    required
   />
 </label>
 {% endmacro %} {% macro city_input(type, name) %}
@@ -40,6 +42,7 @@
     id="{{ name }}"
     class="block w-full rounded-md"
     autocomplete="address-level2"
+    required
   />
 </label>
 {% endmacro %} {% macro state_input(type, name) %}
@@ -51,6 +54,7 @@
     id="{{ name }}"
     class="block w-full rounded-md"
     autocomplete="address-level1"
+    required
   />
 </label>
 {% endmacro %} {% macro zip_input(type, name) %}
@@ -62,6 +66,7 @@
     id="{{ name }}"
     class="block w-full rounded-md"
     autocomplete="postal-code"
+    required
   />
 </label>
 {% endmacro %} {% macro tel_input() %}
