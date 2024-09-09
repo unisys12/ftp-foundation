@@ -25,13 +25,7 @@ page_description: "Application for adoption through For The Puppies Foundation, 
           Household Information
         </legend>
         {{ form.boolean('Do you currently own your home?', 'home ownership') }}
-        <label for="landlord_contact" class="hidden text-left" id="landlord-info">
-          <span class="text-gray-700 text-sm">If you answered yes to the above question only!</span>
-          {{ form.name_input('text', 'landlord_name') }}
-          {{ form.tel_input() }}
-        </label>
         {{ form.boolean('Can you attest that you or anyone else living in your home have not been convicted of Animal Cruelty (as cited in MS Code § 97-41-16 (2023))?', 'animal cruelty') }}
-        
       </fieldset>
       {{ form.submit() }}
     </fieldset>
