@@ -5,7 +5,7 @@
 </label>
 {% endmacro %} {% macro name_input(type, name) %}
 <label for="{{ name }}" class="block text-left mt-4">
-  <span class="text-gray-700 font-semibold text-xl">{{ name | title }}:</span>
+  <span class="text-gray-700 font-semibold text-xl">{{ name | replace('-', ' ') | title }}:</span>
   <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="block w-full rounded-md" autocomplete="name" required />
 </label>
 {% endmacro %} {% macro street_input(type, name) %}
@@ -35,7 +35,7 @@
   <input type="tel" name="telephone" id="telephone" class="block w-full rounded-md" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
 </label>
 {% endmacro %} {% macro submit() %}
-<button type="submit" value="Submit Form" class="bg-[#0023FB] hover:bg-blue-800 px-6 py-3 my-4 rounded-md text-zinc-50 hover:text-gray-50 hover:shadow-sm transition-all duration-300 mb-4">
+<button type="submit" value="Submit Form" id="submit" class="bg-[#0023FB] hover:bg-blue-800 px-6 py-3 my-4 rounded-md text-zinc-50 hover:text-gray-50 hover:shadow-sm transition-all duration-300 mb-4">
   Submit
 </button>
 {% endmacro %} {% macro boolean(question, name) %}

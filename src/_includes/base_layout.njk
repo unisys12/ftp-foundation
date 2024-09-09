@@ -37,6 +37,12 @@ title: "FTP Foundation"
         </div>
     </main>
     {% include "components/footer.html" %}
+    <script>
+        const button = document.querySelector('#adoption-link');
+        button.addEventListener('click', (e) => {
+            sessionStorage.setItem('animal-name', `{{ dog.attributes.name }}`)
+        })
+    </script>
 </body>
 
 </html>

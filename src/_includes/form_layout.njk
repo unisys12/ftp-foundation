@@ -30,27 +30,18 @@ title: "FTP Foundation"
         </div>
     </main>
     {% include "components/footer.html" %}
-    {# <script>
-        const noElement = document.querySelector('#home-ownership-no');
-        const yesElement = document.querySelector('#home-ownership-yes');
-        const infoElement = document.querySelector('#landlord-info');
-        let display;
-        noElement.addEventListener('click', (e) => {
-        display = infoElement.classList.contains('hidden');
-            if (display) {
-                infoElement.classList.remove('hidden')
-                infoElement.classList.add('block')
-            }
-        })
+    <script>
+        const input = document.querySelector('#animal-name');
+        const submit = document.querySelector('#submit');
+        const nameCookie = sessionStorage.getItem('animal-name');
+        if (nameCookie) {
+            input.value = nameCookie;
+        }
 
-        yesElement.addEventListener('click', (e) => {
-        display = infoElement.classList.contains('block');
-            if (display) {
-                infoElement.classList.remove('block')
-                infoElement.classList.add('hidden')
-            }
+        submit.addEventListener('click', (e) => {
+            sessionStorage.remove('animal-name');
         })
-    </script> #}
+    </script>
 </body>
 
 </html>
