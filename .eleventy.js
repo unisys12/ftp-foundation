@@ -1,5 +1,5 @@
 const Fetch = require("@11ty/eleventy-fetch");
-require('dotenv').config()
+require("dotenv").config();
 module.exports = (config) => {
   config.setServerOptions({
     // Whether DOM diffing updates are applied where possible instead of page reloads
@@ -17,20 +17,20 @@ module.exports = (config) => {
                 alt="foster image"
                 class="object-contain"
               />
-            </sl-carousel-item>`  
-  }
+            </sl-carousel-item>`;
+  };
 
-  config.addAsyncShortcode("currentDog", async function(id) {
+  config.addAsyncShortcode("currentDog", async function (id) {
     const res = await selectedDog(id);
     let pictures = [];
     const selectedID = res.data.map((x) => x.id);
-    
+
     res.included.map((items) => {
-      if (selectedID == id && items.type == 'pictures') {
-        pictures.push(items)
+      if (selectedID == id && items.type == "pictures") {
+        pictures.push(items);
       }
     });
-      
+
     return pictures.map((x) => imgComponent(x));
   });
 
@@ -47,19 +47,21 @@ module.exports = (config) => {
     let url = `https://api.rescuegroups.org/v5/public/orgs/${process.env.ORG_ID}/animals/${id}`;
 
     try {
-        return await Fetch(url, {
-            duration: "15m",
-            type: "json",
-            fetchOptions: {
-                method: "GET",
-                headers: {
-                    'Authorization': `${process.env.RESCUE_GROUPS_API_KEY}`,
-                    'Content-Type': "application/vnd.api+json"
-                }
-            }
-        })
+      return await Fetch(url, {
+        duration: "15m",
+        type: "json",
+        fetchOptions: {
+          method: "GET",
+          headers: {
+            Authorization: `${process.env.RESCUE_GROUPS_API_KEY}`,
+            "Content-Type": "application/vnd.api+json",
+          },
+        },
+      });
     } catch (error) {
-        console.error(`There was an error fetching your dogs from RescueGroups.org: ${error}`);
+      console.error(
+        `There was an error fetching your dogs from RescueGroups.org: ${error}`
+      );
     }
-  };
+  }
 };
