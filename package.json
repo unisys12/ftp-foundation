@@ -12,7 +12,8 @@
     "tailwind-dev": "npx tailwindcss -i ./src/assets/css/tailwind.css -o ./_site/assets/css/styles.css --watch",
     "tailwind-build": "npx tailwindcss -i ./src/assets/css/tailwind.css -o ./_site/assets/css/styles.css --minify",
     "dev": "run-p -l tailwind-dev 11ty-dev",
-    "build": "run-p -l tailwind-build 11ty-build"
+    "build": "run-p -l tailwind-build 11ty-build",
+    "debug": "set DEBUG=Eleventy* & npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
