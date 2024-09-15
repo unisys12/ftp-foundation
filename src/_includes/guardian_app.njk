@@ -14,6 +14,7 @@
           {{ form.state_input('text' ,'state') }} 
           {{ form.zip_input('text' ,'zip') }} 
           {{ form.input('email' ,'email') }}
+          {{ form.tel_input() }}
         </fieldset>
         <fieldset class="border-2 border-black/50 rounded-sm p-2">
           <legend class="font-bold">Personal Information</legend>
@@ -27,14 +28,14 @@
           {{ form.boolean('Do you currently own two or more dogs or cats that
           live in your home?', 'multi dog') }} 
           {{ form.boolean('Do you currently
-          have any portion of your yard fenced off?', 'fenced-yard') }} 
+          have any portion of your yard fenced off?', 'has-fenced-yard') }} 
           {{ form.boolean('Bringing a new dog or cat into your home can be a big
           commitment and change to your normal routine. Are you and your family
           willing to accept these new responsibilities and accepting of the
           changes to your normal routines during this time?',
           'accepting-change') }} 
           {{ form.boolean('Are you willing to housebreak
-          a puppy or dog?', 'housebreak') }} 
+          a puppy or dog?', 'willing-to-house-train') }} 
           {{ form.boolean('Do you currently
           have children living in your home?', 'Children living in home') }} 
           {{ form.boolean('Are there children that frequently visit your home?', 'children visit') }}
