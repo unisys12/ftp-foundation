@@ -23,7 +23,71 @@ page_description: Adoption information for {{ dog.attributes.name }}
     </header>
     <article class="mx-auto mt-4 max-w-xl">
         <p class="text-gray-700 leading-tight">{{ dog.attributes.descriptionText | safe }}</p>
-        
+        {% for quality in dog.attributes.qualities %}
+            {% if quality == 'escapes' %}
+            <sl-badge variant="warning" pill>{{ quality }}</sl-badge>
+            {% endif %}
+            {% if quality == 'protective' %}
+            <sl-badge variant="warning" pill>{{ quality }}</sl-badge>
+            {% endif %}
+            <sl-badge pill>{{ quality }}</sl-badge>
+        {% endfor %}
+        <div class="pt-4">
+            <header>
+                <h3 class="font-bold text-xl">Age Info</h3>
+            </header>
+            <ul>
+                <li class="text-sm">
+                    <span class="font-medium">Birthday: </span>
+                    {{ dog.attributes.birthDate }}
+                </li>
+                <li class="text-sm">
+                    <span class="font-medium">Age: </span>
+                    {{ dog.attributes.ageGroup }}
+                </li>
+                <li class="text-sm">
+                    <span class="font-medium">Age Group: </span>
+                    {{ dog.attributes.ageGroup }}
+                </li>
+            </ul>
+            <header>
+                <h3 class="font-bold text-xl">Temperment</h3>
+            </header>
+            <ul>
+                <li class="text-sm">
+                    <span class="font-medium">Good with adults:</span>
+                    {{ dog.attributes.adultSexesOk }}
+                </li>
+                <li class="text-sm">
+                    <span class="font-medium">Energy Level:</span>
+                    {{ dog.attributes.energyLevel }}
+                </li>
+                <li class="text-sm">
+                    <span class="font-medium">Activity Level:</span>
+                    {{ dog.attributes.activityLevel }}
+                </li>
+                <li class="text-sm">
+                    <span class="font-medium">Fence Needs:</span>
+                    {{ dog.attributes.fenceNeeds }}
+                </li>
+                <li class="text-sm">
+                    <span class="font-medium">Is OK with cats:</span>
+                    {{ dog.attributes.isCatsOk }}
+                </li>
+                <li class="text-sm">
+                    <span class="font-medium">Good with kids:</span>
+                    {{ dog.attributes.isKidsOk }}
+                </li>
+                <li class="text-sm">
+                    <span class="font-medium">Good with seniors:</span>
+                    {{ dog.attributes.isSeniorsOk }}
+                </li>
+                <li class="text-sm">
+                    <span class="font-medium">Reaction to new people:</span>
+                    {{ dog.attributes.newPeopleReaction }}
+                </li>
+            </ul>
+        </div>
     </article>
     <div class="mt-4 flex flex-wrap items-center justify-center gap-4">
         <sl-carousel class="aspect-ratio" autoplay loop navigation pagination style="--aspect-ratio: 1/1;">
