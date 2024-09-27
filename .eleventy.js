@@ -8,6 +8,7 @@ module.exports = (config) => {
 
   config.addPassthroughCopy("src/assets/imgs/*.jpg");
   config.addPassthroughCopy("src/assets/imgs/*.png");
+  config.addPassthroughCopy("src/assets/fonts/*.woff2");
   config.addPassthroughCopy("src/favicon.ico");
 
   const imgComponent = (img) => {

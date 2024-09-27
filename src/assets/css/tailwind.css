@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "AtkinsonRegular";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/Atkinson-Hyperlegible-Regular-102a.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "AtkinsonItalic";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/Atkinson-Hyperlegible-Italic-102a.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: "AtkinsonBold";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/Atkinson-Hyperlegible-Bold-102a.woff2) format("woff2");
+  }
+}
+
 sl-carousel-item > img {
-    object-fit: contain;
+  object-fit: contain;
 }

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./src/*.{html,md,njk}", // project root
@@ -9,8 +10,11 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        print: { raw: "print" },
-        screen: { raw: "screen" },
+        print: {raw: "print"},
+        screen: {raw: "screen"},
+      },
+      fontFamily: {
+        sans: ["AtkinsonRegular", ...defaultTheme.fontFamily.sans],
       },
     },
   },
