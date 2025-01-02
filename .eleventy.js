@@ -1,6 +1,6 @@
-const Fetch = require("@11ty/eleventy-fetch");
-require("dotenv").config();
-module.exports = (config) => {
+import EleventyFetch from '@11ty/eleventy-fetch';
+import 'dotenv/config'
+export default (config) => {
   config.setServerOptions({
     // Whether DOM diffing updates are applied where possible instead of page reloads
     domDiff: false,
@@ -40,7 +40,7 @@ module.exports = (config) => {
     markdownTemplateEngine: "njk",
     dir: {
       input: "src",
-      ouput: "_site",
+      output: "_site",
     },
   };
 
@@ -48,7 +48,7 @@ module.exports = (config) => {
     let url = `https://api.rescuegroups.org/v5/public/orgs/${process.env.ORG_ID}/animals/${id}`;
 
     try {
-      return await Fetch(url, {
+      return await EleventyFetch(url, {
         duration: "15m",
         type: "json",
         fetchOptions: {

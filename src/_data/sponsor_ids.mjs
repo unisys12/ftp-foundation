@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     name: "Peanut",
     goal: "jbR8Xj",

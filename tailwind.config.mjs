@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
-module.exports = {
+import forms from "@tailwindcss/forms";
+import typography from "@tailwindcss/typography";
+export default {
   content: [
     "./src/*.{html,md,njk}", // project root
     "./src/minutes/*.{html,md,njk}", // meeting minutes dir
@@ -19,9 +21,9 @@ module.exports = {
     },
   },
   plugins: [
-    require("@tailwindcss/forms")({
+    forms({
       strategy: "base", // only generate global styles
     }),
-    require("@tailwindcss/typography"),
+    typography,
   ],
 };

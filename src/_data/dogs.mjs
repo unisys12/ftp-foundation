@@ -1,6 +1,7 @@
-const Fetch = require("@11ty/eleventy-fetch");
-require('dotenv').config()
-module.exports = async () => {
+import EleventyFetch from '@11ty/eleventy-fetch';
+import 'dotenv/config'
+
+export default async () => {
     let url = `https://api.rescuegroups.org/v5/public/orgs/${process.env.ORG_ID}/animals/search/available/`;
     let body = {
         "data": {
@@ -12,7 +13,7 @@ module.exports = async () => {
       }
 
     try {
-        return await Fetch(url, {
+        return await EleventyFetch(url, {
             duration: "5m",
             type: "json",
             fetchOptions: {
