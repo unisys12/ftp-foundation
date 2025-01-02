@@ -1,14 +1,14 @@
 ---
-layout: base_layout.njk
+layout: "base_layout.njk"
 pagination:
   data: dogs.data
   size: 1
   alias: dog
   resolve: values
 permalink: "dogs/{{ dog.id }}/"
-page_description: Adoption information for {{ dog.attributes.name }}
+eleventyComputed:
+    page_description: "Adoption information for {{ dog.attributes.name }}"
 ---
-
 <section class="not-prose">
     <header class="grid grid-rows">
         <div class="bg-orange-100 mx-auto w-fit overflow-hidden rounded-md hover:bg-orange-50 transition-colors ease-in-out duration-300">
@@ -51,7 +51,7 @@ page_description: Adoption information for {{ dog.attributes.name }}
                 </li>
             </ul>
             <header>
-                <h3 class="font-bold text-xl">Temperment</h3>
+                <h3 class="font-bold text-xl">Temperament</h3>
             </header>
             <ul>
                 <li class="text-sm">
