@@ -1,5 +1,5 @@
-import EleventyFetch from '@11ty/eleventy-fetch';
-import 'dotenv/config'
+import EleventyFetch from "@11ty/eleventy-fetch";
+import "dotenv/config";
 export default (config) => {
   config.setServerOptions({
     // Whether DOM diffing updates are applied where possible instead of page reloads
@@ -33,6 +33,11 @@ export default (config) => {
     });
 
     return pictures.map((x) => imgComponent(x));
+  });
+
+  config.addShortcode("currentYear", () => {
+    const $date = new Date();
+    return `${$date.getFullYear()}`;
   });
 
   return {
