@@ -14,7 +14,6 @@ For The Puppies Foundation is a 501(c)3 made up by 7 board members and 3 volunte
 - Roxy Wilson (Vice President)
 - Melinda Jackson (Treasurer)
 - Jennifer Earles (Secretary)
-- Haley Curry (Social Media Manager)
 
 ### Volunteers
 
