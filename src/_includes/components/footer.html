@@ -1,10 +1,15 @@
-<footer class="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center md:justify-between">
-    <p class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
-        ©{% currentYear %} For The Puppies Foundation
-    </p>
-    <p class="font-semibold">EIN: 93-2482326</p>
-    <a href="https://app.candid.org/profile/15121795" target="_blank">
-        <img src="https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/15121795/svg" class="shadow-md hover:shadow-sm shadow-slate-300 transition-shadow duration-300 ease-in-out" />
-    </a>
-    {% include "components/footer_nav.html" %}
+<footer class="flex w-full flex-row items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center md:justify-between">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        {% include "components/footer_nav.html" %}
+        <p class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+            ©{% currentYear %} For The Puppies Foundation
+        </p>
+        <p class="font-semibold">EIN: 93-2482326</p>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <a href="https://app.candid.org/profile/15121795" target="_blank">
+            <img src="https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/15121795/svg" class="shadow-md hover:shadow-sm shadow-slate-300 transition-shadow duration-300 ease-in-out" />
+        </a>
+        {% include 'components/petbucket.html' %}
+    </div>
 </footer>
